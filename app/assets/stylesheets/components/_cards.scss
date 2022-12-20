@@ -1,0 +1,40 @@
+.card-info {
+background-color: #F8F9FA;
+}
+
+.card-detail{
+background-color: white;
+}
+
+.card{
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 16px;
+}
+
+.card-icons{
+  display: flex;
+  align-items: center;
+}
+
+.item{
+  flex-grow: 1;
+}
+
+.main-container {
+  display: flex;
+}
+
+.book {
+  // height: 100vh;
+}
+.card-flat{
+  flex-grow: 1;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 16px;
+}
+
+.flat-card-image {
+  height: 180px;
+  background-position: center;
+  background-size: cover;
+}

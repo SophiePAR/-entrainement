@@ -1,0 +1,35 @@
+<div class="container">
+<h1 class= "text-center mt-5 mb-5"><strong>All our Flats </strong>
+<br><%= @flats.count %> availables</h1>
+  <div class="row justify-content-center">
+    <% @flats.each do |flat| %>
+      <div class="card col-sm-4 col-lg-3 mx-1 my-2">
+      <div class="flat-card-image" style="background-image: url('https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200')">
+      </div>
+      <div class="card-info text-center">
+      <strong><%= flat.name %></strong>
+      <br>
+      <br>
+      <%= flat.address %>
+      <br>
+        <div class="card-icons m-2">
+          <div class="item">
+          <i class="fa-solid fa-user"></i>
+          <%= flat.number_of_guests %>
+          </div>
+          <div class="item">
+          <i class="fa-solid fa-euro-sign"></i>
+          <%= flat.price_per_night %>
+          </div>
+        </div>
+      </div>
+      <div class="card-detail m-2">
+      <%= link_to "voir plus", flat_path(flat)%>
+      <%= link_to "editer", edit_flat_path(flat), class: "ms-3 text-warning"%>
+      <%= link_to "supprimer", flat_path(flat), data: { turbo_method: :delete},
+              class: "ms-3 text-danger"%>
+      </div>
+      </div>
+    <% end %>
+  </div>
+</div>

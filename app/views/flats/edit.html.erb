@@ -1,0 +1,13 @@
+<div class="container">
+<h1 class= "text-center mt-5">Edit a flat</h1>
+  <div class="row m-auto w-50 mt-5 mb-2 bg-white p-4 rounded-2 shadow">
+    <%= simple_form_for(@flat)do|f|%>
+      <%= f.input :name, label: "Nom"%>
+      <%= f.input :address, label:"Adresse"%>
+      <%= f.input :detail%>
+      <%= f.input :price_per_night, label: "Prix par nuit"%>
+      <%= f.input :number_of_guests, label: "Nombre de personnes"%>
+      <%= f.submit "Ajouter", class: "btn btn-large btn-primary"%>
+    <%end%>
+  </div>
+</div>
